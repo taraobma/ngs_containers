@@ -3,14 +3,14 @@
 Personal Docker/OCI containers for NGS tools.  
 Each tool lives in its own subdirectory with a `Dockerfile` and environment file.
 
-### Bedtools
+### bedtools
 Docker image providing the BEDTools genome analysis toolkit.
 
 - Registry image: `ghcr.io/taraobma/bedtools:latest`
 - Build context: `bedtools/`
 - Tool: bedtools (installed via Bioconda)
 
-### Bowtie2
+### Bowtie 2
 Docker image providing the Bowtie2 fast and sensitive read alignement tool.
 
 - Registry image: `ghcr.io/taraobma/bowtie2:latest`
@@ -31,7 +31,7 @@ Docker image providing the FastQC read quality control tool.
 - Build context: `fastqc/`
 - Tool: FastQC (installed via Bioconda)
 
-### Homer_Samtools
+### Homer_samtools
 Docker image providing HOMER motif analysis tools together with samtools for working with alignment and interval files (e.g. BAM, SAM, BED).
 
 - Registry image: `ghcr.io/taraobma/homer_samtools:latest`
@@ -59,12 +59,19 @@ Docker image providing the Trimmomatic read trimming tool.
 - Build context: `trimmomatic/`
 - Tool: Trimmomatic (installed via Bioconda)
 
-### Samtools
+### samtools
 Docker image providing the samtools toolkit for manipulating and querying SAM/BAM/CRAM alignment files.
 
 - Registry image: `ghcr.io/taraobma/samtools:latest`
 - Build context: `samtools/`
 - Tool: samtools (installed via Bioconda).
+
+### samtools_bedtools
+Docker image providing samtools and bedtools for basic BAM/SAM/CRAM manipulation and interval operations (e.g. intersections for FRiP calculation).
+
+- Registry image: `ghcr.io/USER/samtools_bedtools:latest`
+- Build context: `samtools_bedtools/`
+- Tools: samtools and bedtools (installed via Bioconda).
 
 
 ### Image tags and versions
@@ -90,6 +97,7 @@ Docker image providing the samtools toolkit for manipulating and querying SAM/BA
 | `ghcr.io/taraobma/trimmomatic:latest`              | Trimmomatic  | 0.39    | current default  |
 | `ghcr.io/taraobma/samtools:1.23.1`              | samtools     | 1.23.1  | pinned version |
 | `ghcr.io/taraobma/samtools:latest`              | samtools     | 1.23.1  | current default|
+| `ghcr.io/taraobma/samtools_bedtools:latest`        | samtools, bedtools| 1.23.1, 2.31.1 | FRiP / interval ops container   |
 
 
 ### Building and testing the image 
