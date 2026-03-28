@@ -3,13 +3,30 @@
 Personal Docker/OCI containers for NGS tools.  
 Each tool lives in its own subdirectory with a `Dockerfile` and environment file.
 
-## FastQC
+### FastQC
 
 Docker image providing the FastQC read quality control tool.
 
 - Registry image: `ghcr.io/taraobma/fastqc:latest`
 - Build context: `fastqc/`
 - Tool: FastQC (installed via Bioconda)
+
+### Trimmomatic
+
+Docker image providing the Trimmomatic read trimming tool.
+
+- Registry image: `ghcr.io/USER/trimmomatic:latest`
+- Build context: `trimmomatic/`
+- Tool: Trimmomatic (installed via Bioconda)
+
+### Bedtools
+
+Docker image providing the BEDTools genome analysis toolkit.
+
+- Registry image: `ghcr.io/taraobma/bedtools:latest`
+- Build context: `bedtools/`
+- Tool: BEDTools (installed via Bioconda)
+
 
 ### Image tags and versions
 
@@ -19,6 +36,8 @@ Docker image providing the FastQC read quality control tool.
 | `ghcr.io/taraobma/fastqc:latest` | 0.12.1         | current default  |
 | `ghcr.io/taraobma/trimmomatic:0.39` | 0.39    | pinned version   |
 | `ghcr.io/taraobma/trimmomatic:latest` | 0.39    | current default   |
+| `ghcr.io/taraobma/bedtools:2.31.1` | 2.31.1 | pinned version |
+| `ghcr.io/taraobma/bedtools:latest` | 2.31.1 | current default  |
 
 
 ### Building the image
