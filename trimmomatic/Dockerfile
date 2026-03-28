@@ -15,8 +15,9 @@ RUN apt-get update && apt-get install -y procps && rm -rf /var/lib/apt/lists/*
 # Back to normal user
 USER $MAMBA_USER
 
-# Ensure micromamba base env binaries are on PATH
-ENV PATH="$MAMBA_ROOT_PREFIX/bin:$PATH"
+# Make sure base env is on PATH
+ENV MAMBA_DOCKERFILE_ACTIVATE=1
+ENV PATH="/opt/conda/bin:${PATH}"
 
 # Default: show Trimmomatic help/version
 CMD ["trimmomatic", "-version"]
