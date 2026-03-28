@@ -4,7 +4,6 @@ Personal Docker/OCI containers for NGS tools.
 Each tool lives in its own subdirectory with a `Dockerfile` and environment file.
 
 ### Bedtools
-
 Docker image providing the BEDTools genome analysis toolkit.
 
 - Registry image: `ghcr.io/taraobma/bedtools:latest`
@@ -12,16 +11,13 @@ Docker image providing the BEDTools genome analysis toolkit.
 - Tool: bedtools (installed via Bioconda)
 
 ### Bowtie2
-
 Docker image providing the Bowtie2 fast and sensitive read alignement tool.
 
 - Registry image: `ghcr.io/taraobma/bowtie2:latest`
 - Build context: `bowtie2/`
 - Tool: Bowtie 2 (installed via Bioconda)
 
-
 ### FastQC
-
 Docker image providing the FastQC read quality control tool.
 
 - Registry image: `ghcr.io/taraobma/fastqc:latest`
@@ -29,23 +25,28 @@ Docker image providing the FastQC read quality control tool.
 - Tool: FastQC (installed via Bioconda)
 
 ### Homer_Samtools
-
 Docker image providing HOMER motif analysis tools together with samtools for working with alignment and interval files (e.g. BAM, SAM, BED).
 
 - Registry image: `ghcr.io/taraobma/homer_samtools:latest`
 - Build context: `homer_samtools/`
 - Tool: HOMER (via Bioconda) plus samtools (via Bioconda)
 
+### MACS3
+Docker image providing MACS3, a peak-calling tool for ChIP-seq and related assays.
+
+- Registry image: `ghcr.io/taraobma/macs3:latest`
+- Build context: `macs3/`
+- Tool: MACS3 (installed via Bioconda).
+
 ### MultiQC
 Docker image providing MultiQC, a tool to aggregate results from multiple bioinformatics reports (e.g. FastQC) into a single HTML report.
 
 - Registry image: `ghcr.io/taraobma/multiqc:latest`
-- Build context: multiqc/
+- Build context: `multiqc/`
 - Tool: MultiQC (installed via Bioconda).
 
 
 ### Trimmomatic
-
 Docker image providing the Trimmomatic read trimming tool.
 
 - Registry image: `ghcr.io/taraobma/trimmomatic:latest`
@@ -53,11 +54,10 @@ Docker image providing the Trimmomatic read trimming tool.
 - Tool: Trimmomatic (installed via Bioconda)
 
 ### Samtools
-
 Docker image providing the samtools toolkit for manipulating and querying SAM/BAM/CRAM alignment files.
 
 - Registry image: `ghcr.io/taraobma/samtools:latest`
-- Build context: samtools/
+- Build context: `samtools/`
 - Tool: samtools (installed via Bioconda).
 
 
@@ -74,6 +74,8 @@ Docker image providing the samtools toolkit for manipulating and querying SAM/BA
 | `ghcr.io/taraobma/homer_samtools:homer5.1`         | HOMER        | 5.1     | pinned HOMER; includes samtools 1.23.1 |
 | `ghcr.io/taraobma/homer_samtools:homer5.1-sam1.23.1`| HOMER       | 5.1     | fully pinned HOMER + samtools          |
 | `ghcr.io/taraobma/homer_samtools:latest`           | HOMER        | 5.1     | current default; samtools 1.23.1       |
+ `ghcr.io/taraobma/macs3:3.0.4`                | MACS3      | 3.0.4    | pinned version  |
+| `ghcr.io/taraobma/macs3:latest`              | MACS3     | 3.0.4    | current default |
 | `ghcr.io/taraobma/multiqc:1.33`                | MultiQC      | 1.33    | pinned version  |
 | `ghcr.io/taraobma/multiqc:latest`              | MultiQC      | 1.33    | current default |
 | `ghcr.io/taraobma/trimmomatic:0.39`                | Trimmomatic  | 0.39    | pinned version        |
