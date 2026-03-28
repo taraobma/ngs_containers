@@ -39,19 +39,16 @@ Docker image providing the Trimmomatic read trimming tool.
 
 ### Image tags and versions
 
-| Image tag                               | FastQC version | Notes            |
-|----------------------------------------|----------------|------------------|
-| `ghcr.io/taraobma/bedtools:2.31.1` | 2.31.1 | pinned version |
-| `ghcr.io/taraobma/bedtools:latest` | 2.31.1 | current default  |
-
-| `ghcr.io/taraobma/bowtie2:2.31.1` | 2.5.5 | pinned version |
-| `ghcr.io/taraobma/bowtie2:latest` | 2.5.5 | current default  |
-
-| `ghcr.io/taraobma/fastqc:0.12.1` | 0.12.1         | pinned version   |
-| `ghcr.io/taraobma/fastqc:latest` | 0.12.1         | current default  |
-
-| `ghcr.io/taraobma/trimmomatic:0.39` | 0.39    | pinned version   |
-| `ghcr.io/taraobma/trimmomatic:latest` | 0.39    | current default   |
+| Image tag                                  | Tool         | Version | Notes          |
+|--------------------------------------------|--------------|---------|----------------|
+| `ghcr.io/taraobma/fastqc:0.12.1`          | FastQC       | 0.12.1  | pinned version |
+| `ghcr.io/taraobma/fastqc:latest`           | FastQC       | 0.12.1  | current default|
+| `ghcr.io/taraobma/trimmomatic:0.39`        | Trimmomatic  | 0.39    | pinned version |
+| `ghcr.io/taraobma/trimmomatic:latest`      | Trimmomatic  | 0.39    | current default|
+| `ghcr.io/taraobma/bedtools:2.31.1`         | Bedtools     | 2.31.1  | pinned version |
+| `ghcr.io/taraobma/bedtools:latest`         | Bedtools     | 2.31.1  | current default|
+| `ghcr.io/taraobma/bowtie2:2.5.5`           | Bowtie2      | 2.5.5   | pinned version |
+| `ghcr.io/taraobma/bowtie2:latest`          | Bowtie2      | 2.5.5   | current default|
 
 
 
