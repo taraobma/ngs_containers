@@ -1,12 +1,18 @@
-FROM continuumio/miniconda3
+FROM mambaorg/micromamba:latest
 
 WORKDIR /data
 
-COPY fastqc_env.yml /tmp/fastqc_env.yml
+COPY --chown=$MAMBA_USER:$MAMBA_USER fastqc_env.yml /fastqc_env.yml
 
-RUN conda env create -f /tmp/fastqc_env.yml && \
-    conda clean -afy
+# Install FastQC into the base env
+RUN micromamba install -y -n base -f /fastqc_env.yml && \
+    micromamba clean --all --yes
 
-ENV PATH=/opt/conda/envs/fastqc_env/bin:$PATH
+USER root
+RUN apt-get update && apt-get install -y procps && rm -rf /var/lib/apt/lists/*
 
-CMD ["fastqc", "--help"]
+USER $MAMBA_USER
+
+# micromamba's entrypoint sets up the base env 
+
+CMD ["fastqc", "--version"]
