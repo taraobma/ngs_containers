@@ -3,6 +3,23 @@
 Personal Docker/OCI containers for NGS tools.  
 Each tool lives in its own subdirectory with a `Dockerfile` and environment file.
 
+### Bedtools
+
+Docker image providing the BEDTools genome analysis toolkit.
+
+- Registry image: `ghcr.io/taraobma/bedtools:latest`
+- Build context: `bedtools/`
+- Tool: BEDTools (installed via Bioconda)
+
+### Bowtie2
+
+Docker image providing the Bowtie2 fast and sensitive read alignement tool.
+
+- Registry image: `ghcr.io/taraobma/bowtie2:latest`
+- Build context: `bowtie2/`
+- Tool: Bowtie2 (installed via Bioconda)
+
+
 ### FastQC
 
 Docker image providing the FastQC read quality control tool.
@@ -19,25 +36,23 @@ Docker image providing the Trimmomatic read trimming tool.
 - Build context: `trimmomatic/`
 - Tool: Trimmomatic (installed via Bioconda)
 
-### Bedtools
-
-Docker image providing the BEDTools genome analysis toolkit.
-
-- Registry image: `ghcr.io/taraobma/bedtools:latest`
-- Build context: `bedtools/`
-- Tool: BEDTools (installed via Bioconda)
-
 
 ### Image tags and versions
 
 | Image tag                               | FastQC version | Notes            |
 |----------------------------------------|----------------|------------------|
-| `ghcr.io/taraobma/fastqc:0.12.1` | 0.12.1         | pinned version   |
-| `ghcr.io/taraobma/fastqc:latest` | 0.12.1         | current default  |
-| `ghcr.io/taraobma/trimmomatic:0.39` | 0.39    | pinned version   |
-| `ghcr.io/taraobma/trimmomatic:latest` | 0.39    | current default   |
 | `ghcr.io/taraobma/bedtools:2.31.1` | 2.31.1 | pinned version |
 | `ghcr.io/taraobma/bedtools:latest` | 2.31.1 | current default  |
+
+| `ghcr.io/taraobma/bowtie2:2.31.1` | 2.5.5 | pinned version |
+| `ghcr.io/taraobma/bowtie2:latest` | 2.5.5 | current default  |
+
+| `ghcr.io/taraobma/fastqc:0.12.1` | 0.12.1         | pinned version   |
+| `ghcr.io/taraobma/fastqc:latest` | 0.12.1         | current default  |
+
+| `ghcr.io/taraobma/trimmomatic:0.39` | 0.39    | pinned version   |
+| `ghcr.io/taraobma/trimmomatic:latest` | 0.39    | current default   |
+
 
 
 ### Building the image
