@@ -36,6 +36,13 @@ Docker image providing HOMER motif analysis tools together with samtools for wor
 - Build context: `homer_samtools/`
 - Tool: HOMER (via Bioconda) plus samtools (via Bioconda)
 
+### MultiQC
+Docker image providing MultiQC, a tool to aggregate results from multiple bioinformatics reports (e.g. FastQC) into a single HTML report.
+
+- Registry image: `ghcr.io/taraobma/multiqc:latest`
+- Build context: multiqc/
+- Tool: MultiQC (installed via Bioconda).
+
 
 ### Trimmomatic
 
@@ -67,6 +74,8 @@ Docker image providing the samtools toolkit for manipulating and querying SAM/BA
 | `ghcr.io/taraobma/homer_samtools:homer5.1`         | HOMER        | 5.1     | pinned HOMER; includes samtools 1.23.1 |
 | `ghcr.io/taraobma/homer_samtools:homer5.1-sam1.23.1`| HOMER       | 5.1     | fully pinned HOMER + samtools          |
 | `ghcr.io/taraobma/homer_samtools:latest`           | HOMER        | 5.1     | current default; samtools 1.23.1       |
+| `ghcr.io/taraobma/multiqc:1.33`                | MultiQC      | 1.33    | pinned version  |
+| `ghcr.io/taraobma/multiqc:latest`              | MultiQC      | 1.33    | current default |
 | `ghcr.io/taraobma/trimmomatic:0.39`                | Trimmomatic  | 0.39    | pinned version        |
 | `ghcr.io/taraobma/trimmomatic:latest`              | Trimmomatic  | 0.39    | current default       |
 | `ghcr.io/taraobma/samtools:1.23.1`              | samtools     | 1.23.1  | pinned version |
