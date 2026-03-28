@@ -17,9 +17,9 @@ Docker image providing the FastQC read quality control tool.
 |----------------------------------------|----------------|------------------|
 | `ghcr.io/taraobma/fastqc:0.12.1` | 0.12.1         | pinned version   |
 | `ghcr.io/taraobma/fastqc:latest` | 0.12.1         | current default  |
+| `ghcr.io/taraobma/trimmomatic:0.39` | 0.39    | pinned version   |
 | `ghcr.io/taraobma/trimmomatic:latest` | 0.39    | current default   |
 
-Update this table whenever you rebuild the image with a new FastQC version.
 
 ### Building the image
 
