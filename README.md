@@ -17,6 +17,13 @@ Docker image providing the Bowtie2 fast and sensitive read alignement tool.
 - Build context: `bowtie2/`
 - Tool: Bowtie 2 (installed via Bioconda)
 
+### deepTools
+Docker image providing deepTools, a suite of utilities for processing and visualizing high-throughput sequencing data (e.g. generating coverage bigWigs and profiles from BAM files).
+
+- Registry image: `ghcr.io/taraobma/deeptools:latest`
+- Build context: `deeptools/`
+- Tool: deepTools (installed via Bioconda)
+
 ### FastQC
 Docker image providing the FastQC read quality control tool.
 
@@ -45,7 +52,6 @@ Docker image providing MultiQC, a tool to aggregate results from multiple bioinf
 - Build context: `multiqc/`
 - Tool: MultiQC (installed via Bioconda).
 
-
 ### Trimmomatic
 Docker image providing the Trimmomatic read trimming tool.
 
@@ -65,21 +71,23 @@ Docker image providing the samtools toolkit for manipulating and querying SAM/BA
 
 | Image tag                                          | Tool         | Version | Notes                                  |
 |----------------------------------------------------|--------------|---------|----------------------------------------|
-| `ghcr.io/taraobma/bedtools:2.31.1`                 | bedtools     | 2.31.1  | pinned version                         |
-| `ghcr.io/taraobma/bedtools:latest`                 | bedtools     | 2.31.1  | current default                        |
-| `ghcr.io/taraobma/bowtie2:2.5.5`                   | Bowtie 2      | 2.5.5   | pinned version                         |
-| `ghcr.io/taraobma/bowtie2:latest`                  | Bowtie 2      | 2.5.5   | current default                        |
-| `ghcr.io/taraobma/fastqc:0.12.1`                   | FastQC       | 0.12.1  | pinned version                         |
-| `ghcr.io/taraobma/fastqc:latest`                   | FastQC       | 0.12.1  | current default                        |
+| `ghcr.io/taraobma/bedtools:2.31.1`                 | bedtools     | 2.31.1  | pinned version   |
+| `ghcr.io/taraobma/bedtools:latest`                 | bedtools     | 2.31.1  | current default  |
+| `ghcr.io/taraobma/bowtie2:2.5.5`                   | Bowtie 2      | 2.5.5   | pinned version   |
+| `ghcr.io/taraobma/bowtie2:latest`                  | Bowtie 2      | 2.5.5   | current default  |
+| `ghcr.io/taraobma/deeptools:3.5.6`                   | deepTools      | 3.5.6   | pinned version   |
+| `ghcr.io/taraobma/deeptools:latest`                  | deepTools      | 3.5.6   | current default  |
+| `ghcr.io/taraobma/fastqc:0.12.1`                   | FastQC       | 0.12.1  | pinned version   |
+| `ghcr.io/taraobma/fastqc:latest`                   | FastQC       | 0.12.1  | current default   |
 | `ghcr.io/taraobma/homer_samtools:homer5.1`         | HOMER        | 5.1     | pinned HOMER; includes samtools 1.23.1 |
-| `ghcr.io/taraobma/homer_samtools:homer5.1-sam1.23.1`| HOMER       | 5.1     | fully pinned HOMER + samtools          |
-| `ghcr.io/taraobma/homer_samtools:latest`           | HOMER        | 5.1     | current default; samtools 1.23.1       |
+| `ghcr.io/taraobma/homer_samtools:homer5.1-sam1.23.1`| HOMER       | 5.1     | fully pinned HOMER + samtools    |
+| `ghcr.io/taraobma/homer_samtools:latest`           | HOMER        | 5.1     | current default; samtools 1.23.1  |
  `ghcr.io/taraobma/macs3:3.0.4`                | MACS3      | 3.0.4    | pinned version  |
 | `ghcr.io/taraobma/macs3:latest`              | MACS3     | 3.0.4    | current default |
 | `ghcr.io/taraobma/multiqc:1.33`                | MultiQC      | 1.33    | pinned version  |
 | `ghcr.io/taraobma/multiqc:latest`              | MultiQC      | 1.33    | current default |
-| `ghcr.io/taraobma/trimmomatic:0.39`                | Trimmomatic  | 0.39    | pinned version        |
-| `ghcr.io/taraobma/trimmomatic:latest`              | Trimmomatic  | 0.39    | current default       |
+| `ghcr.io/taraobma/trimmomatic:0.39`                | Trimmomatic  | 0.39    | pinned version   |
+| `ghcr.io/taraobma/trimmomatic:latest`              | Trimmomatic  | 0.39    | current default  |
 | `ghcr.io/taraobma/samtools:1.23.1`              | samtools     | 1.23.1  | pinned version |
 | `ghcr.io/taraobma/samtools:latest`              | samtools     | 1.23.1  | current default|
 
