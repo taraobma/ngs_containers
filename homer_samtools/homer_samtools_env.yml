@@ -1,0 +1,9 @@
+name: homer_samtools_env
+channels:
+  - conda-forge
+  - bioconda
+  - defaults
+  
+dependencies:
+  - homer
+  - samtools

@@ -39,25 +39,29 @@ Docker image providing the Trimmomatic read trimming tool.
 
 ### Image tags and versions
 
-| Image tag                                  | Tool         | Version | Notes          |
-|--------------------------------------------|--------------|---------|----------------|
-| `ghcr.io/taraobma/fastqc:0.12.1`          | FastQC       | 0.12.1  | pinned version |
-| `ghcr.io/taraobma/fastqc:latest`           | FastQC       | 0.12.1  | current default|
-| `ghcr.io/taraobma/trimmomatic:0.39`        | Trimmomatic  | 0.39    | pinned version |
-| `ghcr.io/taraobma/trimmomatic:latest`      | Trimmomatic  | 0.39    | current default|
-| `ghcr.io/taraobma/bedtools:2.31.1`         | Bedtools     | 2.31.1  | pinned version |
-| `ghcr.io/taraobma/bedtools:latest`         | Bedtools     | 2.31.1  | current default|
-| `ghcr.io/taraobma/bowtie2:2.5.5`           | Bowtie2      | 2.5.5   | pinned version |
-| `ghcr.io/taraobma/bowtie2:latest`          | Bowtie2      | 2.5.5   | current default|
+| Image tag                                          | Tool         | Version | Notes                                  |
+|----------------------------------------------------|--------------|---------|----------------------------------------|
+| `ghcr.io/taraobma/bedtools:2.31.1`                 | Bedtools     | 2.31.1  | pinned version                         |
+| `ghcr.io/taraobma/bedtools:latest`                 | Bedtools     | 2.31.1  | current default                        |
+| `ghcr.io/taraobma/bowtie2:2.5.5`                   | Bowtie2      | 2.5.5   | pinned version                         |
+| `ghcr.io/taraobma/bowtie2:latest`                  | Bowtie2      | 2.5.5   | current default                        |
+| `ghcr.io/taraobma/fastqc:0.12.1`                   | FastQC       | 0.12.1  | pinned version                         |
+| `ghcr.io/taraobma/fastqc:latest`                   | FastQC       | 0.12.1  | current default                        |
+| `ghcr.io/taraobma/homer_samtools:homer5.1`         | HOMER        | 5.1     | pinned HOMER; includes samtools 1.23.1 |
+| `ghcr.io/taraobma/homer_samtools:homer5.1-sam1.23.1`| HOMER       | 5.1     | fully pinned HOMER + samtools          |
+| `ghcr.io/taraobma/homer_samtools:latest`           | HOMER        | 5.1     | current default; samtools 1.23.1       |
+| `ghcr.io/taraobma/trimmomatic:0.39`                | Trimmomatic  | 0.39    | pinned version                         |
+| `ghcr.io/taraobma/trimmomatic:latest`              | Trimmomatic  | 0.39    | current default                        |
 
 
-
-### Building the image
+### Building and testing the image 
 
 From the `fastqc/` directory:
 
 ```bash
 docker build -t fastqc:latest .
+
+docker run --rm fastqc:lastest
 ```
 
 Tag and push to GitHub Container Registry:
